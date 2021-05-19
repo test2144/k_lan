@@ -1,0 +1,25 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for SitePoint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michiel Mulders",
+  "license": "ISC",
+  "dependencies": {
+    "discord": "^0.8.2",
+    "discord.js": "^11.6.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkq1l/WorldOfZadr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kkq1l/WorldOfZadr/issues"
+  },
+  "homepage": "https://github.com/kkq1l/WorldOfZadr#readme"
+}
