@@ -18,7 +18,7 @@ bot.on('presenceUpdate', async (oldPresence, newPresence) => {
   
     switch (String(activities)) {
 	case "Genshin Impact" :
-		return newPresence.member.roles.add(role);
+		return newPresence.member.roles.add(roleG);
 	case "Dota 2" :
 		return newPresence.member.roles.add(roleD2);
 	}
