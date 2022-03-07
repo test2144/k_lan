@@ -13,6 +13,7 @@ bot.on('ready', () => {
 bot.on('presenceUpdate', async (oldPresence, newPresence) => {
     const roleD2 = newPresence.guild.roles.cache.get('949641980433014837')
     const roleG = newPresence.guild.roles.cache.get('950231538090512415')
+    const roleCS = newPresence.guild.roles.cache.get('950450953977466960')
     const member = newPresence.member
     const activities = member.user.presence.activities[0];
   
@@ -21,6 +22,8 @@ bot.on('presenceUpdate', async (oldPresence, newPresence) => {
 		return newPresence.member.roles.add(roleG);
 	case "Dota 2" :
 		return newPresence.member.roles.add(roleD2);
+	case "Counter-Strike: Global Offensive" :
+		return newPresence.member.roles.add(roleCS);
 	}
 })
 bot.on('message', msg => {
