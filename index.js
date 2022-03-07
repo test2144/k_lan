@@ -1,4 +1,3 @@
-
 const { Client, Intents } = require('discord.js');
 const TOKEN = process.env.BOT_TOKEN;
 
@@ -18,16 +17,16 @@ bot.on('ready', () => {
   console.info(`Logged in as ${bot.user.tag}!`);
 });
 bot.on("presenceUpdate", (oldPresence, newPresence) => {
-    const roleD2 = newPresence.guild.roles.cache.get('949641980433014837')
-    const roleG = newPresence.guild.roles.cache.get('950231538090512415')
-    const roleCS = newPresence.guild.roles.cache.get('950450953977466960')
+    let guild = newPresence.guild;
 	const member = newPresence.member;
     const activities = member.presence.activities[0];
-	console.info(String(activities))
-
-	switch (String(activities)) {
+    let roleD2 = newPresence.guild.roles.cache.get('949641980433014837')
+    let roleG = newPresence.guild.roles.cache.get('950231538090512415')
+    let roleCS = newPresence.guild.roles.cache.get('950450953977466960')
+	console.info(String(activities)+" "+newPresence.user);
+    switch (String(activities)) {
 	case "Genshin Impact" :
-		return newPresence.member.roles.add(roleG);
+		 newPresence.member.roles.add(roleG);
 	case "Dota 2" :
 		return newPresence.member.roles.add(roleD2);
 	case "Counter-Strike: Global Offensive" :
