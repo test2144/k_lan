@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 const { Client, Intents } = require('discord.js');
 const TOKEN = process.env.BOT_TOKEN;
 
