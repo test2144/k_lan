@@ -17,17 +17,17 @@ bot.on('ready', () => {
   bot.user.setActivity(game, { type: 'WATCHING'});
   console.info(`Logged in as ${bot.user.tag}!`);
 });
-bot.on('presenceUpdate', async (oldPresence, newPresence) => {
-    let guild = oldPresence.guild;
+bot.on("presenceUpdate", async (oldPresence, newPresence) => {
+    const roleD2 = newPresence.guild.roles.cache.get('949641980433014837')
+    const roleG = newPresence.guild.roles.cache.get('950231538090512415')
 	const member = newPresence.member;
     const activities = member.presence.activities[0];
-    const role = newPresence.guild.roles.cache.get('950377866342846494')
 	console.info(String(activities))
 	
 	switch (String(activities)) {
-	case "Counter-Strike: Global Offensive" :
+	case "Genshin Impact" :
 		return newPresence.member.roles.add(role);
-	case "Dota2" :
-		return newPresence.member.roles.add(role);
+	case "Dota 2" :
+		return newPresence.member.roles.add(roleD2);
 	}
 });
