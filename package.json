@@ -1,0 +1,52 @@
+{
+  "name": "meandboyes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "asynckit": "^0.4.0",
+    "balanced-match": "^1.0.0",
+    "combined-stream": "^1.0.8",
+    "brace-expansion": "^1.1.11",
+    "concat-map": "^0.0.1",
+    "delayed-stream": "^1.0.0",
+    "discord-api-types": "^0.26.1",
+    "describe": "^1.2.0",
+    "dotenv": "^8.2.0",
+    "discord.js": "^13.6.0",
+    "discord": "^0.8.2",
+    "form-data": "^4.0.0",
+    "fs.realpath": "^1.0.0",
+    "express": "^4.17.1",
+    "glob": "^7.1.6",
+    "inflight": "^1.0.6",
+    "node-fetch": "^2.6.7",
+    "mootools": "^1.5.2",
+    "minimatch": "^3.0.4",
+    "once": "^1.4.0",
+    "path-is-absolute": "^1.0.1",
+    "tr46": "^0.0.3",
+    "string-color": "^0.8.0",
+    "ts-mixer": "^6.0.0",
+    "webidl-conversions": "^3.0.1",
+    "whatwg-url": "^5.0.0",
+    "zod": "^3.13.4",
+    "ws": "^8.5.0",
+    "tslib": "^2.3.1",
+    "wrappy": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkq1l/WorldOfZadr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkq1l/WorldOfZadr/issues"
+  },
+  "homepage": "https://github.com/kkq1l/WorldOfZadr#readme"
+}
