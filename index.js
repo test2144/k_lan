@@ -38,49 +38,40 @@ bot.on('message', msg => {
 	const command = args.shift().toLowerCase();
 	switch (command) {
 		case "play" :
-		game="";
-		var k=0;
-		for (k=0;k<args.length;k++){
-			game=game+" "+args[k];
-		}
-		playGame();
-		msg.channel.send('> Теперь я играю в '+game);
-		break;
-	case "watch" :
-		game="";
-		var k=0;
-		for (k=0;k<args.length;k++){
-			game=game+" "+args[k];
-		}
-		watchGame();
-		msg.channel.send('> Теперь я смотрю '+game);
-		break;
-	case "send" :
-		let channelId = args[0].replace(/[^0-9]/g, "");
-		let message="";
-		var k=0;
-		for (k=1;k<args.length;k++){
-			message=message+" "+args[k];
-		}
-		const channel = bot.channels.find(channel => channel.id === channelId)
-		
-		channel.send(""+message)
-		msg.channel.send('> Я отправил Ваше сообщение на '+args[0]+' с текстом:'+message);
-		console.info(message);
-		break;
-	case "play" :
-		game="";
-		var k=0;
-		for (k=0;k<args.length;k++){
-			game=game+" "+args[k];
-		}
-		playGame();
-		msg.channel.send('> Теперь я играю в '+game);
-		break;
+			game="";
+			var k=0;
+			for (k=0;k<args.length;k++){
+				game=game+" "+args[k];
+			}
+			playGame();
+			msg.channel.send('> Теперь я играю в '+game);
+			break;
+		case "watch" :
+			game="";
+			var k=0;
+			for (k=0;k<args.length;k++){
+				game=game+" "+args[k];
+			}
+			watchGame();
+			msg.channel.send('> Теперь я смотрю '+game);
+			break;
+		case "send" :
+			let channelId = args[0].replace(/[^0-9]/g, "");
+			let message="";
+			var k=0;
+			for (k=1;k<args.length;k++){
+				message=message+" "+args[k];
+			}
+			const channel = bot.channels.find(channel => channel.id === channelId)
+
+			channel.send(""+message)
+			msg.channel.send('> Я отправил Ваше сообщение на '+args[0]+' с текстом:'+message);
+			console.info(message);
+			break;
 	}
 });
 function playGame() {
-  bot.user.setActivity(game, {type: 'Playing'});
+  bot.user.setActivity(game, {type: 'PLAYING'});
 }
 function watchGame() {
   bot.user.setActivity(game, {type: 'WATCHING'});
