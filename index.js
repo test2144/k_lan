@@ -62,7 +62,7 @@ bot.on('message', msg => {
 			for (k=1;k<args.length;k++){
 				message=message+" "+args[k];
 			}
-			const channel = bot.channels.find(channel => channel.id === channelId)
+			const channel = bot.channels.cache.find(channel => channel.id === channelId)
 
 			channel.send(""+message)
 			msg.channel.send('> Я отправил Ваше сообщение на '+args[0]+' с текстом:'+message);
