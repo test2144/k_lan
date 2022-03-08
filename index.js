@@ -68,10 +68,19 @@ bot.on('message', msg => {
 			msg.channel.send('> Я отправил Ваше сообщение на '+args[0]+' с текстом:'+message);
 			console.info(message);
 			break;
+		case "stream" :
+			game=args[0];
+			stream=args[1]
+			StreamingVideo();
+			msg.channel.send('> Теперь я стримлю '+args[0]+" "+stream);
+			break;
 	}
 });
 function playGame() {
   bot.user.setActivity(game, {type: 'PLAYING'});
+}
+function StreamingVideo() {
+   bot.user.setActivity(game, { type: "STREAMING", url: stream });
 }
 function watchGame() {
   bot.user.setActivity(game, {type: 'WATCHING'});
