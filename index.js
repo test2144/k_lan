@@ -68,6 +68,15 @@ bot.on('message', msg => {
 		msg.channel.send('> Я отправил Ваше сообщение на '+args[0]+' с текстом:'+message);
 		console.info(message);
 		break;
+	case "play" :
+		game="";
+		var k=0;
+		for (k=0;k<args.length;k++){
+			game=game+" "+args[k];
+		}
+		playGame();
+		msg.channel.send('> Теперь я играю в '+game);
+		break;
 	}
 });
 function playGame() {
