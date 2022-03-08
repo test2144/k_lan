@@ -23,6 +23,7 @@ bot.on("presenceUpdate", (oldPresence, newPresence) => {
     let roleD2 = newPresence.guild.roles.cache.get('949641980433014837')
     let roleG = newPresence.guild.roles.cache.get('950231538090512415')
     let roleCS = newPresence.guild.roles.cache.get('950450953977466960')
+    let roleER = newPresence.guild.roles.cache.get('950694168085274704')
 	console.info(String(activities)+" "+newPresence.user);
     switch (String(activities)) {
 	case "Genshin Impact" :
@@ -31,6 +32,8 @@ bot.on("presenceUpdate", (oldPresence, newPresence) => {
 		return newPresence.member.roles.add(roleD2);
 	case "Counter-Strike: Global Offensive" :
 		return newPresence.member.roles.add(roleCS);
+ 	case "ELDEN RING" :
+		return newPresence.member.roles.add(roleER);
 	}
 });
 bot.on('message', msg => {
