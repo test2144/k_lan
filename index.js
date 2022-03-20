@@ -15,6 +15,12 @@ let stream="";
 bot.on('ready', () => {
   bot.user.setActivity(game, { type: 'WATCHING'});
   console.info(`Logged in as ${bot.user.tag}!`);
+
+  let guildd = bot.guilds.cache.get('762682454196617257')
+  bot.channels.cache.get('955171065410228314').setName(`PIDORi: ${guild.members.cache.filter(member => member.roles.cache.has('949641980433014837')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('949641980433014837')).filter(m => m.presence?.status === "online").size}`)
+  bot.channels.cache.get('955171121211265104').setName(`GEi: ${guild.members.cache.filter(member => member.roles.cache.has('950450953977466960')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('950450953977466960')).filter(m => m.presence?.status === "online").size}`)
+  bot.channels.cache.get('955171137116045342').setName(`SuperN: ${guild.members.cache.filter(member => member.roles.cache.has('950231538090512415')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('950231538090512415')).filter(m => m.presence?.status === "online").size}`)
+
 });
 bot.on("presenceUpdate", (oldPresence, newPresence) => {
     let guild = newPresence.guild;
@@ -35,7 +41,25 @@ bot.on("presenceUpdate", (oldPresence, newPresence) => {
  	case "ELDEN RING" :
 		return newPresence.member.roles.add(roleER);
 	}
+
+  bot.channels.cache.get('955171065410228314').setName(`PIDORi: ${guild.members.cache.filter(member => member.roles.cache.has('949641980433014837')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('949641980433014837')).filter(m => m.presence?.status === "online").size}`)
+  bot.channels.cache.get('955171121211265104').setName(`GEi: ${guild.members.cache.filter(member => member.roles.cache.has('950450953977466960')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('950450953977466960')).filter(m => m.presence?.status === "online").size}`)
+  bot.channels.cache.get('955171137116045342').setName(`SuperN: ${guild.members.cache.filter(member => member.roles.cache.has('950231538090512415')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('950231538090512415')).filter(m => m.presence?.status === "online").size}`)
+
 });
+
+bot.on('gildMemberAdd', (member) => {
+  bot.channels.cache.get('955171065410228314').setName(`PIDORi: ${member.guild.members.cache.filter(member => member.roles.cache.has('949641980433014837')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('949641980433014837')).filter(m => m.presence?.status === "online").size}`)
+  bot.channels.cache.get('955171121211265104').setName(`GEi: ${member.guild.members.cache.filter(member => member.roles.cache.has('950450953977466960')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('950450953977466960')).filter(m => m.presence?.status === "online").size}`)
+  bot.channels.cache.get('955171137116045342').setName(`SuperN: ${member.guild.members.cache.filter(member => member.roles.cache.has('950231538090512415')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('950231538090512415')).filter(m => m.presence?.status === "online").size}`)
+})
+
+bot.on('gildMemberRemove', (member) => {
+  bot.channels.cache.get('955171065410228314').setName(`PIDORi: ${member.guild.members.cache.filter(member => member.roles.cache.has('949641980433014837')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('949641980433014837')).filter(m => m.presence?.status === "online").size}`)
+  bot.channels.cache.get('955171121211265104').setName(`GEi: ${member.guild.members.cache.filter(member => member.roles.cache.has('950450953977466960')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('950450953977466960')).filter(m => m.presence?.status === "online").size}`)
+  bot.channels.cache.get('955171137116045342').setName(`SuperN: ${member.guild.members.cache.filter(member => member.roles.cache.has('950231538090512415')).size} 🍺: ${guild.members.cache.filter(member => member.roles.cache.has('950231538090512415')).filter(m => m.presence?.status === "online").size}`)
+})
+
 bot.on('message', msg => {
 	const args = msg.content.trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
